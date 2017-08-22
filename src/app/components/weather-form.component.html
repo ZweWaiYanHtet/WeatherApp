@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="addCity()" #addCityForm="ngForm" novalidate>
+      <div class="form-group">
+        <label for="cityName">City</label>
+        <input type="text" class="form-control" id="cityName" name="cityName" ngModel required>
+      </div>
+      <div class="form-group">
+        <div class="col-md-2 pull-right">
+          <button type="submit" class="btn btn-primary form-control" [disabled]="!addCityForm.valid">Add City</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
